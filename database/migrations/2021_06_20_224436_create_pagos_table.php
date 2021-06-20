@@ -15,6 +15,8 @@ class CreatePagosTable extends Migration
     {
         Schema::create('pagos', function (Blueprint $table) {
             $table->id();
+            $table->string('tipo_de_pago', 50);
+            $table->boolean('permitido');
             $table->timestamps();
         });
     }
