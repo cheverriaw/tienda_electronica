@@ -24,7 +24,7 @@ class CreateDetalleCarritosTable extends Migration
             $table->unsignedBigInteger('id_productos')->nullable();
             $table->foreign('id_productos')->references('id')->on('productos')->onDelete('set null');
            
-            $table->integer('cantidad',11);
+            $table->integer('cantidad');
             $table->decimal('precio', 8, 2);
             $table->decimal('subtotal', 8, 2);
 

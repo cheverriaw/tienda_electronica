@@ -23,7 +23,7 @@ class CreateProductosTable extends Migration
             $table->string('nombre', 50);
             $table->text('descripcion')->nullable();
             $table->decimal('precio', 8, 2);
-            $table->integer('cantidad',11);
+            $table->integer('cantidad');
             $table->string('foto', 255);
             $table->timestamps();
 
