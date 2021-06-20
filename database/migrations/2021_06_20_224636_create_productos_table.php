@@ -18,7 +18,7 @@ class CreateProductosTable extends Migration
 
             //relacion con categorias
             $table->unsignedBigInteger('id_categoria')->nullable();
-            $table->foreign('id_categoria')->references('id')->on('categorias')->onDelete('set null');;
+            $table->foreign('id_categoria')->references('id')->on('categorias')->onDelete('set null');
             
             $table->string('nombre', 50);
             $table->text('descripcion')->nullable();

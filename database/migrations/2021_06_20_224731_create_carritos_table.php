@@ -15,6 +15,13 @@ class CreateCarritosTable extends Migration
     {
         Schema::create('carritos', function (Blueprint $table) {
             $table->id();
+            
+            //relacionamos con el cliente
+            $table->unsignedBigInteger('id_cliente')->nullable();
+            $table->foreign('id_cliente')->references('id')->on('clientes')->onDelete('set null');
+           
+            $table->text('descripcion')->nullable();
+            $table->decimal('total', 8, 2);
             $table->timestamps();
         });
     }
