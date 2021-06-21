@@ -48,7 +48,7 @@
                                             <td>{{ ++$i }}</td>
                                             
 											<td>{{ $pago->tipo_de_pago }}</td>
-											<td>{{ $pago->permitido }}</td>
+											<td>{{ $pago->permitido ? 'Si' : 'No'}}</td>
 
                                             <td>
                                                 <form action="{{ route('pagos.destroy',$pago->id) }}" method="POST">

@@ -17,6 +17,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::resource('/home/productos',App\Http\Controllers\ProductoController::class)->middleware('auth');
+Route::resource('/home/pagos',App\Http\Controllers\PagoController::class)->middleware('auth');
