@@ -57,23 +57,23 @@
                                 <a class="nav-link" href="/home/pagos">Pagos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Categorias</a>
+                                <a class="nav-link" href="/home/categorias">Categorias</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Productos</a>
+                                <a class="nav-link" href="/home/productos">Productos</a>
                             </li>
         
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Clientes</a>
+                                <a class="nav-link" href="/home/clientes">Clientes</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Carritos</a>
+                                <a class="nav-link" href="/home/carritos">Carritos</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Detalle Carritos</a>
+                                <a class="nav-link" href="/home/ordenes">Ordenes</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Compras</a>
+                                <a class="nav-link" href="/home/compras">Compras</a>
                             </li>
 
                             <li class="nav-item dropdown">

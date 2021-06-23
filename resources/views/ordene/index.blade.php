@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Detalle Carrito
+    Ordene
 @endsection
 
 @section('content')
@@ -13,11 +13,11 @@
                         <div style="display: flex; justify-content: space-between; align-items: center;">
 
                             <span id="card_title">
-                                {{ __('Detalle Carrito') }}
+                                {{ __('Ordene') }}
                             </span>
 
                              <div class="float-right">
-                                <a href="{{ route('detalle-carritos.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
+                                <a href="{{ route('ordenes.create') }}" class="btn btn-primary btn-sm float-right"  data-placement="left">
                                   {{ __('Create New') }}
                                 </a>
                               </div>
@@ -46,20 +46,20 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($detalleCarritos as $detalleCarrito)
+                                    @foreach ($ordenes as $ordene)
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
-											<td>{{ $detalleCarrito->id_carrito }}</td>
-											<td>{{ $detalleCarrito->id_productos }}</td>
-											<td>{{ $detalleCarrito->cantidad }}</td>
-											<td>{{ $detalleCarrito->precio }}</td>
-											<td>{{ $detalleCarrito->subtotal }}</td>
+											<td>{{ $ordene->id_carrito }}</td>
+											<td>{{ $ordene->id_productos }}</td>
+											<td>{{ $ordene->cantidad }}</td>
+											<td>{{ $ordene->precio }}</td>
+											<td>{{ $ordene->subtotal }}</td>
 
                                             <td>
-                                                <form action="{{ route('detalle-carritos.destroy',$detalleCarrito->id) }}" method="POST">
-                                                    <a class="btn btn-sm btn-primary " href="{{ route('detalle-carritos.show',$detalleCarrito->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
-                                                    <a class="btn btn-sm btn-success" href="{{ route('detalle-carritos.edit',$detalleCarrito->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
+                                                <form action="{{ route('ordenes.destroy',$ordene->id) }}" method="POST">
+                                                    <a class="btn btn-sm btn-primary " href="{{ route('ordenes.show',$ordene->id) }}"><i class="fa fa-fw fa-eye"></i> Show</a>
+                                                    <a class="btn btn-sm btn-success" href="{{ route('ordenes.edit',$ordene->id) }}"><i class="fa fa-fw fa-edit"></i> Edit</a>
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-fw fa-trash"></i> Delete</button>
@@ -72,7 +72,7 @@
                         </div>
                     </div>
                 </div>
-                {!! $detalleCarritos->links() !!}
+                {!! $ordenes->links() !!}
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    Create Detalle Carrito
+    Create Ordene
 @endsection
 
 @section('content')
@@ -13,13 +13,13 @@
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <span class="card-title">Create Detalle Carrito</span>
+                        <span class="card-title">Create Ordene</span>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{{ route('detalle-carritos.store') }}"  role="form" enctype="multipart/form-data">
+                        <form method="POST" action="{{ route('ordenes.store') }}"  role="form" enctype="multipart/form-data">
                             @csrf
 
-                            @include('detalle-carrito.form')
+                            @include('ordene.form')
 
                         </form>
                     </div>

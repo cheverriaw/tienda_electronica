@@ -4,30 +4,31 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDetalleCarritosTable extends Migration
+class CreateComprasTabe extends Migration
 {
-    /**
+   /**
      * Run the migrations.
      *
      * @return void
      */
     public function up()
     {
-        Schema::create('detalle_carritos', function (Blueprint $table) {
+        Schema::create('compras', function (Blueprint $table) {
             $table->id();
+            //relacionamos con el cliente
+            $table->unsignedBigInteger('id_cliente')->nullable();
+            $table->foreign('id_cliente')->references('id')->on('clientes')->onDelete('set null');
 
             //relacionamo carritos
             $table->unsignedBigInteger('id_carrito')->nullable();
             $table->foreign('id_carrito')->references('id')->on('carritos')->onDelete('set null');
-            
-            //relacionamos productos
-            $table->unsignedBigInteger('id_productos')->nullable();
-            $table->foreign('id_productos')->references('id')->on('productos')->onDelete('set null');
-           
-            $table->integer('cantidad');
-            $table->decimal('precio', 8, 2);
-            $table->decimal('subtotal', 8, 2);
+             
+            //relacionamo pagos
+            $table->unsignedBigInteger('id_pago')->nullable();
+            $table->foreign('id_pago')->references('id')->on('pagos')->onDelete('set null');
 
+
+            $table->decimal('total', 8, 2);
             $table->timestamps();
         });
     }
@@ -39,6 +40,6 @@ class CreateDetalleCarritosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('detalle_carritos');
+        Schema::dropIfExists('compras');
     }
 }

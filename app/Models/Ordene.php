@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 /**
- * Class DetalleCarrito
+ * Class Ordene
  *
  * @property $id
  * @property $id_carrito
@@ -21,7 +21,7 @@ use Illuminate\Database\Eloquent\Model;
  * @package App
  * @mixin \Illuminate\Database\Eloquent\Builder
  */
-class DetalleCarrito extends Model
+class Ordene extends Model
 {
     
     static $rules = [

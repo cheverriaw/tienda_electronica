@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('template_title')
-    {{ $detalleCarrito->name ?? 'Show Detalle Carrito' }}
+    {{ $ordene->name ?? 'Show Ordene' }}
 @endsection
 
 @section('content')
@@ -11,10 +11,10 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="float-left">
-                            <span class="card-title">Show Detalle Carrito</span>
+                            <span class="card-title">Show Ordene</span>
                         </div>
                         <div class="float-right">
-                            <a class="btn btn-primary" href="{{ route('detalle-carritos.index') }}"> Back</a>
+                            <a class="btn btn-primary" href="{{ route('ordenes.index') }}"> Back</a>
                         </div>
                     </div>
 
@@ -22,23 +22,23 @@
                         
                         <div class="form-group">
                             <strong>Id Carrito:</strong>
-                            {{ $detalleCarrito->id_carrito }}
+                            {{ $ordene->id_carrito }}
                         </div>
                         <div class="form-group">
                             <strong>Id Productos:</strong>
-                            {{ $detalleCarrito->id_productos }}
+                            {{ $ordene->id_productos }}
                         </div>
                         <div class="form-group">
                             <strong>Cantidad:</strong>
-                            {{ $detalleCarrito->cantidad }}
+                            {{ $ordene->cantidad }}
                         </div>
                         <div class="form-group">
                             <strong>Precio:</strong>
-                            {{ $detalleCarrito->precio }}
+                            {{ $ordene->precio }}
                         </div>
                         <div class="form-group">
                             <strong>Subtotal:</strong>
-                            {{ $detalleCarrito->subtotal }}
+                            {{ $ordene->subtotal }}
                         </div>
 
                     </div>
