@@ -50,7 +50,7 @@
                                             
 											<td>{{ $categoria->nombre }}</td>
 											<td>{{ $categoria->descripcion }}</td>
-											<td>{{ $categoria->activo }}</td>
+											<td>{{ $categoria->activo ? 'Si':'No' }}</td>
 
                                             <td>
                                                 <form action="{{ route('categorias.destroy',$categoria->id) }}" method="POST">

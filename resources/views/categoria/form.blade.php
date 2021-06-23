@@ -13,7 +13,11 @@
         </div>
         <div class="form-group">
             {{ Form::label('activo') }}
-            {{ Form::text('activo', $categoria->activo, ['class' => 'form-control' . ($errors->has('activo') ? ' is-invalid' : ''), 'placeholder' => 'Activo']) }}
+            {{-- Form::text('activo', $categoria->activo, ['class' => 'form-control' . ($errors->has('activo') ? ' is-invalid' : ''), 'placeholder' => 'Activo']) --}}
+            <select id="activo" name="activo" class="form-control">    
+                <option value="1"  {{$categoria->activo==1 ? 'selected' : ''}}>Si</option>
+                <option value="0"  {{$categoria->activo==0 ? 'selected' : ''}}>No</option>
+            </select>
             {!! $errors->first('activo', '<div class="invalid-feedback">:message</p>') !!}
         </div>
 

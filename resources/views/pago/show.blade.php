@@ -26,7 +26,7 @@
                         </div>
                         <div class="form-group">
                             <strong>Permitido:</strong>
-                            {{ $pago->permitido }}
+                            {{ $pago->permitido ? 'Si': 'No'}}
                         </div>
 
                     </div>

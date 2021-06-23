@@ -8,7 +8,12 @@
         </div>
         <div class="form-group">
             {{ Form::label('permitido') }}
-            {{ Form::text('permitido', $pago->permitido, ['class' => 'form-control' . ($errors->has('permitido') ? ' is-invalid' : ''), 'placeholder' => 'Permitido']) }}
+            {{-- Form::text('permitido', $pago->permitido, ['class' => 'form-control' . ($errors->has('permitido') ? ' is-invalid' : ''), 'placeholder' => 'Permitido']) --}}
+            <select id="permitido" name="permitido" class="form-control">    
+                        <option value="1"  {{$pago->permitido==1 ? 'selected' : ''}}>Si</option>
+                        <option value="0"  {{$pago->permitido==0 ? 'selected' : ''}}>No</option>
+            </select>
+
             {!! $errors->first('permitido', '<div class="invalid-feedback">:message</p>') !!}
         </div>
 
